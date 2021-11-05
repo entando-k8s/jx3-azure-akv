@@ -35,7 +35,7 @@ spec:
     tls:
       email: ops@entando.com
       enabled: true
-      production: false
+      production: true
   pipelineUser:
     username: entando-jx
   repository: nexus
