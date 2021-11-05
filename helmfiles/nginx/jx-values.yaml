@@ -20,28 +20,48 @@ jxRequirements:
     enabled: false
     schedule: ""
   cluster:
+    azure:
+      dns:
+        resourceGroup: rg-dns-jenkins-x-3
+        subscriptionId: 3968a4ee-a20a-4ff2-9fdb-27ecc0f62414
+        tenantId: f646269f-ec9e-4908-9630-90015d05b462
+      secretStorage:
+        keyVaultName: jenkins-x-3
+      storage:
+        storageAccountName: jxjenkinsx3
+    chartRepository: http://jenkins-x-chartmuseum.jx.svc.cluster.local:8080
+    environmentGitOwner: entando-k8s
     gitKind: github
     gitName: github
     gitServer: https://github.com
     provider: aks
+    registry: jenkinsx3.azurecr.io
   environments:
   - key: dev
+    owner: entando-k8s
+    repository: jx3-azure-akv
   - key: staging
   - key: production
   ingress:
-    domain: change.me
+    domain: jx.entando.io
+    externalDNS: true
     kind: ingress
     namespaceSubDomain: -nginx.
     tls:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: entando-jx
   repository: nexus
   secretStorage: azurekeyvault
+  storage:
+  - name: logs
+    url: azblob://logs
   vault: {}
   webhook: lighthouse
 jxRequirementsIngressExternalDNS:
-  enabled: false
+  enabled: true
 jxRequirementsIngressTLS:
   enabled: false
 jxRequirementsKuberhealthy:
