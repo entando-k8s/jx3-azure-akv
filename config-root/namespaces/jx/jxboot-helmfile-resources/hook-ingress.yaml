@@ -24,4 +24,4 @@ spec:
   tls:
     - hosts:
         - hook-jx.jx.entando.io
-      secretName: "tls-jx-entando-io-s"
+      secretName: "tls-jx-entando-io-p"

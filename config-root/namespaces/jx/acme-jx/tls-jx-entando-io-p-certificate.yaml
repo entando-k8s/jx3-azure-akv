@@ -1,18 +1,18 @@
-# Source: acme/templates/cert-manager-staging-certificate.yaml
+# Source: acme/templates/cert-manager-prod-certificate.yaml
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: "tls-jx-entando-io-s"
+  name: "tls-jx-entando-io-p"
   labels:
-    jenkins.io/letsencrypt-service: staging
+    jenkins.io/letsencrypt-service: production
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
     meta.helm.sh/release-name: 'acme-jx'
   namespace: jx
 spec:
-  secretName: "tls-jx-entando-io-s"
+  secretName: "tls-jx-entando-io-p"
   issuerRef:
-    name: letsencrypt-staging
+    name: letsencrypt-prod
     kind: ClusterIssuer
   commonName: "*.jx.entando.io"
   dnsNames:

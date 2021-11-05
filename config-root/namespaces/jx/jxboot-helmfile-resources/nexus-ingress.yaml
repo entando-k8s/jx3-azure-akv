@@ -23,4 +23,4 @@ spec:
   tls:
     - hosts:
         - nexus-jx.jx.entando.io
-      secretName: "tls-jx-entando-io-s"
+      secretName: "tls-jx-entando-io-p"
