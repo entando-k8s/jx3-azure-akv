@@ -21,3 +21,7 @@ spec:
                   number: 80
             path: "/hook"
       host: hook-jx.jx.entando.io
+  tls:
+    - hosts:
+        - hook-jx.jx.entando.io
+      secretName: "tls-jx-entando-io-s"

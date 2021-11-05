@@ -28,3 +28,7 @@ spec:
                 name: jx-pipelines-visualizer
                 port:
                   name: http
+  tls:
+    - secretName: tls-jx-entando-io-s
+      hosts:
+        - dashboard-jx.jx.entando.io

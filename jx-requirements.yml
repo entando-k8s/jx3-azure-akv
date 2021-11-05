@@ -33,7 +33,7 @@ spec:
     kind: ingress
     namespaceSubDomain: -jx.
     tls:
-      email: "ops@entando.com"
+      email: ops@entando.com
       enabled: true
       production: false
   pipelineUser:
