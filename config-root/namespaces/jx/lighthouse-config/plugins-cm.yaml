@@ -6,6 +6,10 @@ data:
       repos:
       - entando-k8s/jx3-azure-akv
       require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - entando-k8s/entando-k8s-operator-common
+      require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
     config_updater:
@@ -16,6 +20,11 @@ data:
         env/prow/plugins.yaml:
           name: plugins
     external_plugins:
+      entando-k8s/entando-k8s-operator-common:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
       entando-k8s/jx3-azure-akv:
       - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
         name: cd-indicators
@@ -26,6 +35,22 @@ data:
       additional_labels: null
     owners: {}
     plugins:
+      entando-k8s/entando-k8s-operator-common:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
       entando-k8s/jx3-azure-akv:
       - config-updater
       - approve
@@ -55,6 +80,11 @@ data:
     - repos:
       - entando-k8s/jx3-azure-akv
       trusted_org: todo
+    - repos:
+      - entando-k8s/entando-k8s-operator-common
+      trusted_org: todo
+    welcome:
+    - message_template: Welcome
 kind: ConfigMap
 metadata:
   creationTimestamp: null
