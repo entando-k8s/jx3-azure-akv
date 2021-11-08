@@ -7,6 +7,7 @@ data:
       LinkURL: null
     in_repo_config:
       enabled:
+        entando-k8s/entando-k8s-operator-common: true
         entando-k8s/jx3-azure-akv: true
     plank: {}
     pod_namespace: jx
@@ -19,6 +20,7 @@ data:
         required-if-present-contexts: null
         skip-unknown-contexts: false
       merge_method:
+        entando-k8s/entando-k8s-operator-common: merge
         entando-k8s/jx3-azure-akv: merge
       queries:
       - labels:
@@ -31,6 +33,7 @@ data:
         - needs-rebase
         repos:
         - entando-k8s/jx3-azure-akv
+        - entando-k8s/entando-k8s-operator-common
       - labels:
         - updatebot
         missingLabels:
@@ -41,6 +44,7 @@ data:
         - needs-rebase
         repos:
         - entando-k8s/jx3-azure-akv
+        - entando-k8s/entando-k8s-operator-common
       target_url: http://lighthouse-jx.jx.entando.io/merge/status
 kind: ConfigMap
 metadata:
