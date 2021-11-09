@@ -12,12 +12,6 @@ repositories:
 - name: jxgh
   url: https://jenkins-x-charts.github.io/repo
 releases:
-- chart: jxgh/lighthouse-webui-plugin
-  version: 0.1.7
-  name: lighthouse-webui-plugin
-  values:
-  - ../../versionStream/charts/jxgh/lighthouse-webui-plugin/values.yaml.gotmpl
-  - jx-values.yaml
 - chart: bitnami/external-dns
   version: 5.0.0
   condition: jxRequirementsIngressExternalDNS.enabled
