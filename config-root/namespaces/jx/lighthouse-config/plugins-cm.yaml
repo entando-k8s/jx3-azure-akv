@@ -10,10 +10,6 @@ data:
       repos:
       - entando-k8s/entando-k8s-operator-common
       require_self_approval: true
-    - lgtm_acts_as_approve: true
-      repos:
-      - pietrangelo/jx-rust-http
-      require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
     config_updater:
@@ -30,11 +26,6 @@ data:
       - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
         name: lighthouse-webui-plugin
       entando-k8s/jx3-azure-akv:
-      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
-        name: cd-indicators
-      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
-        name: lighthouse-webui-plugin
-      pietrangelo/jx-rust-http:
       - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
         name: cd-indicators
       - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
@@ -77,22 +68,6 @@ data:
       - cat
       - dog
       - pony
-      pietrangelo/jx-rust-http:
-      - approve
-      - assign
-      - blunderbuss
-      - help
-      - hold
-      - lgtm
-      - lifecycle
-      - override
-      - size
-      - trigger
-      - wip
-      - heart
-      - cat
-      - dog
-      - pony
     requiresig: {}
     sigmention: {}
     size:
@@ -107,9 +82,6 @@ data:
       trusted_org: todo
     - repos:
       - entando-k8s/entando-k8s-operator-common
-      trusted_org: todo
-    - repos:
-      - pietrangelo/jx-rust-http
       trusted_org: todo
     welcome:
     - message_template: Welcome
