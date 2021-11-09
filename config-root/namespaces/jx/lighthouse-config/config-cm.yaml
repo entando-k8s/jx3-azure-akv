@@ -9,6 +9,7 @@ data:
       enabled:
         entando-k8s/entando-k8s-operator-common: true
         entando-k8s/jx3-azure-akv: true
+        pietrangelo/jx-rust-http: true
     plank: {}
     pod_namespace: jx
     prowjob_namespace: jx
@@ -22,6 +23,7 @@ data:
       merge_method:
         entando-k8s/entando-k8s-operator-common: merge
         entando-k8s/jx3-azure-akv: merge
+        pietrangelo/jx-rust-http: merge
       queries:
       - labels:
         - approved
@@ -34,6 +36,7 @@ data:
         repos:
         - entando-k8s/jx3-azure-akv
         - entando-k8s/entando-k8s-operator-common
+        - pietrangelo/jx-rust-http
       - labels:
         - updatebot
         missingLabels:
@@ -45,6 +48,7 @@ data:
         repos:
         - entando-k8s/jx3-azure-akv
         - entando-k8s/entando-k8s-operator-common
+        - pietrangelo/jx-rust-http
       target_url: http://lighthouse-jx.jx.entando.io/merge/status
 kind: ConfigMap
 metadata:
