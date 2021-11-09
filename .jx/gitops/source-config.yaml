@@ -10,12 +10,6 @@ spec:
     repositories:
     - name: entando-k8s-operator-common
     scheduler: in-repo
-  - owner: pietrangelo
-    provider: https://github.com
-    providerKind: github
-    repositories:
-    - name: jx-rust-http
-    scheduler: in-repo
   slack:
     channel: '#jenkins-x-pipelines'
     kind: failureOrNextSuccess
